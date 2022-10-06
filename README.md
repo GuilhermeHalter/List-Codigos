@@ -50,7 +50,7 @@ POST	| Cria um recurso</br>
 PUT	| Atualiza um recurso</br>
 PATCH	| Atualiza parcialmente um recurso</br>
 
-**Exemplo do metodo GET**
+--**Exemplo do metodo GET**--
 
 "categorias": [</br>
     {"id": 1, "descricao": "Carros"},</br>
@@ -71,14 +71,88 @@ async function buscarTodasAsCategorias() {</br>
 
 essa função async tem como buscar os itens da lista "categoria" e mostralos na tela 
 
+--**Exemplo do metodo POST**--
+
+{</br>
+    "descricao": "Nova categoria"</br>
+}
+
+</br>
+
+async function adicionarCategoria(nova_categoria)</br>
+    try {</br>
+        const resposta = await axios.post('http://localhost:4000/categorias', {nova_categoria})</br>
+        return resposta.data</br>
+    } catch(error) {</br>
+        console.log(error)</br>
+    }</br>
+}
+
+resultado:
+
+{"id": 4, "descricao": "Nova categoria"}
 
 
+
+--**Exemplo do metodo PUT e PATCH**--
+
+{</br>
+    "id": 2,</br>
+    "descricao": "Motocicleta"</br>
+}
+
+async function alteraCategoria(categoria) {</br>
+    try {</br>
+        const resposta = await axios.put(`http://localhost:4000/categorias/${categoria.id}`, {categoria})</br>
+        return resposta.data</br>
+    } catch(error) {</br>
+        console.log(error)</br>
+    }
+    
+   
+ resultado:
+ 
+ {"id": 2, "descricao": "Motocicleta"}
+ 
+ 
+ --**Exemplo do metodo DELETE**--
+ 
+ async function excluirCategoria(id) {</br>
+    try {</br>
+        const resposta = await axios.delete(`http://localhost:4000/categorias/${id}`)</br>
+        return resposta.data</br>
+    } catch(error) {</br>
+        console.log(error)</br>
+    }</br>
+}
 
 # Heroku
 
+Caso você ainda não tenha uma conta no Heroku, seguir os seguintes passos:
+
+* Acessar o https://www.heroku.com/</br>
+* Clicar no ícone SignUp para criar uma nova conta
+
+Estando no dashboard de acesso, você deve criar uma nova aplicação, clicando em Create new app.
+[imagem]
+
+Escolha um nome para o aplicativo. É importante ressaltar que esse nome deve ser único. Então, certifique-se que a mensagem is available apareceu logo abaixo no nome escolhido, com isso, a aplicação está criada e os recursos necessários serão alocados na plataforma do Heroku.
+[imagem]
+
+Você será redirecionado para uma tela de configuração do deploy. Caso você tenha saído do Heroku, você pode obter uma lista dos aplicativos na tela de dashboard após o login. Então, basta clicar sobre o aplicativo desejado e ter acesso às mesmas configurações.
+[imagem]
+
+Depois de conectada a aplicação com o repositório no GitHub, basta escolher a branch para monitoramento e fazer o deploy.
+[imagem]
+
+Note que, como o repositório no GitHub está integrado com a aplicação, sempre que for realizado um push para a branch escolhida, a aplicação no Heroku será atualizada.
 
 
 
-# SITE DO SOR EDUARDO
 
-https://eduardo-da-silva.github.io/aula-desenvolvimento-web/
+
+
+
+# CRÉDITOS
+
+https://eduardo-da-silva.github.io/aula-desenvolvimento-web/ - Eduardo da Silva
