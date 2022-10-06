@@ -31,8 +31,54 @@ O Vue.js nada mais é do que um framework (um conjunto de códigos genéricos qu
 o que é o Axios?</br>
 Axios é um cliente HTTP tanto para uso no node.js quanto em um navegador.
 
-1-Primeiramente você precisa instalar a biblioteca Axios:
+* Primeiramente você precisa instalar a biblioteca Axios:
 
 npm install axios
 
+* para importar o Axios em seus arquivos usamos:
+
+import axios from 'axios'
+
+sempre que importarmos o Axios usaremos uma função async.
+
+* Verbos REST
+
+Os principais verbos rest são os 
+
+GET	| Busca um recurso</br>
+POST	| Cria um recurso</br>
+PUT	| Atualiza um recurso</br>
+PATCH	| Atualiza parcialmente um recurso</br>
+
+**Exemplo do metodo GET**
+
+"categorias": [</br>
+    {"id": 1, "descricao": "Carros"},</br>
+    {"id": 2, "descricao": "Motos"},</br>
+    {"id": 3, "descricao": "Caminhões"},</br>
+]
+
+
+async function buscarTodasAsCategorias() {</br>
+    try {</br>
+        const resposta = await axios.get('http://localhost:4000/categorias')</br>
+        return resposta.data
+    } catch(error) {</br>
+        console.log(error)
+    }</br>
+}
+
+
+essa função async tem como buscar os itens da lista "categoria" e mostralos na tela 
+
+
+
+
 # Heroku
+
+
+
+
+# SITE DO SOR EDUARDO
+
+https://eduardo-da-silva.github.io/aula-desenvolvimento-web/
