@@ -11,7 +11,8 @@ O Vue.js nada mais é do que um framework (um conjunto de códigos genéricos qu
   <a href="#router">Router</a> |
   <a href="#pinia">Pinia</a> |
   <a href="#api">API</a> |
-  <a href="#outra coisa">outra coisa</a>
+  <a href="#axios">Axios</a> |
+  <a href="#heroku">Heroku</a>
 </p>
 
 # Router
@@ -26,4 +27,7 @@ O Vue.js nada mais é do que um framework (um conjunto de códigos genéricos qu
 
 
 
-# Outra coisa
+# Axios
+
+
+# Heroku
