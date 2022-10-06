@@ -26,8 +26,13 @@ O Vue.js nada mais é do que um framework (um conjunto de códigos genéricos qu
 # API
 
 
-
 # Axios
 
+o que é o Axios?</br>
+Axios é um cliente HTTP tanto para uso no node.js quanto em um navegador.
+
+1-Primeiramente você precisa instalar a biblioteca Axios:
+
+npm install axios
 
 # Heroku
