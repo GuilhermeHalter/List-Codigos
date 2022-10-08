@@ -17,6 +17,35 @@ O Vue.js nada mais é do que um framework (um conjunto de códigos genéricos qu
 
 # Router
 
+Para começar vamos importar o Router no arquivo "main.js" usando os seguintes codigos:
+
+* import VueRouter from 'vue-router';
+
+* Vue.use(VueRouter)
+
+Logo após que você importou o Router, crie uma nova pasta com o nome que você quiser, no meu caso vou criar uma pasta com o nome "pages"
+e dentro dessa pasta crie seus arquivos, eu vou criar 2 arquivos com os nomes de "PaginaUm.vue" e "PaginaDois.vue"
+
+*Obs: os arquivos dentro da pasta tem que ter obrigatoriamente 2 letras maiusculas assim como no exemplo acima *
+
+Ainda no arquivo "main.js" vamos configurar o ambiente do vue, para isso crie:
+
+const router = new VueRouter({
+  modes: 'history',
+  routes: [
+    { path: '/', component: PaginaUm},
+    { path: '/', component: PaginaUm}
+  ]
+})
+
+
+
+
+
+
+
+
+
 
 
 # Pinia
@@ -69,7 +98,7 @@ async function buscarTodasAsCategorias() {</br>
 }
 
 
-essa função async tem como buscar os itens da lista "categoria" e mostralos na tela 
+essa função async tem como objetivo buscar e retornar os itens da lista "categoria" 
 
 --**Exemplo do metodo POST**--
 
