@@ -17,18 +17,22 @@ O Vue.js nada mais é do que um framework (um conjunto de códigos genéricos qu
 
 # Router
 
-1) Para começar vamos importar o Router no arquivo "main.js" usando os seguintes codigos:
+1) Vamos começar instalando o Route, no terminal utilizando o comando:
+
+npm install vue-router @ 4
+
+2) Para começar vamos importar o Router no arquivo "main.js" usando os seguintes codigos:
 
 * import VueRouter from 'vue-router';
 
 * Vue.use(VueRouter)
 
-2) Logo após que você importou o Router, crie uma nova pasta com o nome que você quiser, no meu caso vou criar uma pasta com o nome "pages"
+3) Logo após que você importou o Router, crie uma nova pasta com o nome que você quiser, no meu caso vou criar uma pasta com o nome "pages"
 e dentro dessa pasta crie seus arquivos, eu vou criar 2 arquivos com os nomes de "PaginaUm.vue" e "PaginaDois.vue"
 
 *Obs: os arquivos dentro da pasta tem que ter obrigatoriamente 2 letras maiusculas assim como no exemplo acima *
 
-3) Ainda no arquivo "main.js" vamos configurar o ambiente do vue, para isso crie:
+4) Ainda no arquivo "main.js" vamos configurar o ambiente do vue, para isso crie:
 
 const router = new VueRouter({
   modes: 'history',
@@ -38,32 +42,40 @@ const router = new VueRouter({
   ]
 })
 
-4) Porem os Componentes PaginaUm e PaginaDois, não foram registraddos, teremos que importalos:
+5) Porem os Componentes PaginaUm e PaginaDois, não foram registraddos, teremos que importalos:
 
 import PaginaUm from './pages/PaginaUm';    -> vai indicar o caminho que seu arquivo está </br>
 import PaginaDois from './pages/PaginaDois';
 
-5) Ainda no arquivo "main.js" no código do 'new Vue' adicione o seguinte:
+6) Ainda no arquivo "main.js" no código do 'new Vue' adicione o seguinte:
  
 router,
 
-6) No aquivo "App.vue" no template dentro da div id=app coloque:
+7) No aquivo "App.vue" no template dentro da div id=app coloque:
 
-<router-view></router-view>
+ <router-view></router-view> 
 
 **Utilizando router link**
 
 O router link é como se fosse a tag "a" do html.</br>
-Como usar o router link
+Como usar o router link:
 
-<router-link to="">home</route-link>
+<router-link to= "/p2"> home </router-link>
 
 
 # Pinia
 
+1)Assim como o Router começamos instalando o Pinia, no terminal usando o comando:
 
+npm install pinia
 
-# API
+2)No arquivo "main.js" importe e crie uma instancia para o pinia:
+
+import { createPinia } from 'pinia'
+
+const pinia = createPinia()
+
+app.use(pinia)
 
 
 # Axios
@@ -187,12 +199,17 @@ Depois de conectada a aplicação com o repositório no GitHub, basta escolher a
 
 Note que, como o repositório no GitHub está integrado com a aplicação, sempre que for realizado um push para a branch escolhida, a aplicação no Heroku será atualizada.
 
+# API
+
+Para consumir uma Api vamos utilizar principalmente o Axios.
 
 
 
 
+</br>
+</br>
+</br>
 
-
-# CRÉDITOS
+### CRÉDITOS
 
 https://eduardo-da-silva.github.io/aula-desenvolvimento-web/ - Eduardo da Silva
